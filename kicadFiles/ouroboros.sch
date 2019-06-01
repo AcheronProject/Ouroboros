@@ -1,0 +1,1195 @@
+EESchema Schematic File Version 4
+LIBS:ouroboros-cache
+EELAYER 29 0
+EELAYER END
+$Descr A4 11693 8268
+encoding utf-8
+Sheet 1 1
+Title "Ouroboros operational amplifier"
+Date "2019-05-24"
+Rev "1.0"
+Comp "Designed by Álvaro \"Gondolindrim\""
+Comment1 "Ouroboros is part of the Acheron Project"
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+$Comp
+L Device:R_POT P1
+U 1 1 5CE5C0F3
+P 4525 2975
+F 0 "P1" V 4410 2975 50  0000 C CNN
+F 1 "100k" V 4319 2975 50  0000 C CNN
+F 2 "acheronHardware:3313J" H 4525 2975 50  0001 C CNN
+F 3 "~" H 4525 2975 50  0001 C CNN
+	1    4525 2975
+	0    -1   -1   0   
+$EndComp
+$Comp
+L Device:R_Small R3
+U 1 1 5CE5CA3F
+P 3525 2500
+F 0 "R3" H 3466 2454 50  0000 R CNN
+F 1 "2.2k" H 3466 2545 50  0000 R CNN
+F 2 "Resistor_SMD:R_0805_2012Metric_Pad1.15x1.40mm_HandSolder" H 3525 2500 50  0001 C CNN
+F 3 "~" H 3525 2500 50  0001 C CNN
+	1    3525 2500
+	1    0    0    1   
+$EndComp
+$Comp
+L Transistor_BJT:2SA1015 Q5
+U 1 1 5CE5D3A4
+P 3625 2100
+F 0 "Q5" H 3816 2054 50  0000 L CNN
+F 1 "2SA1015" H 3816 2145 50  0000 L CNN
+F 2 "Package_TO_SOT_SMD:SOT-23" H 3825 2025 50  0001 L CIN
+F 3 "http://www.datasheetcatalog.org/datasheet/toshiba/905.pdf" H 3625 2100 50  0001 L CNN
+	1    3625 2100
+	-1   0    0    1   
+$EndComp
+$Comp
+L Transistor_BJT:2SC1815 Q3
+U 1 1 5CE5D87F
+P 2925 4025
+F 0 "Q3" H 3116 4071 50  0000 L CNN
+F 1 "2SC1815" H 3116 3980 50  0000 L CNN
+F 2 "Package_TO_SOT_SMD:SOT-23" H 3125 3950 50  0001 L CIN
+F 3 "https://media.digikey.com/pdf/Data%20Sheets/Toshiba%20PDFs/2SC1815.pdf" H 2925 4025 50  0001 L CNN
+	1    2925 4025
+	-1   0    0    -1  
+$EndComp
+$Comp
+L Device:R_Small R4
+U 1 1 5CE60F80
+P 3875 1950
+F 0 "R4" H 3934 1996 50  0000 L CNN
+F 1 "100" H 3934 1905 50  0000 L CNN
+F 2 "Resistor_SMD:R_0805_2012Metric_Pad1.15x1.40mm_HandSolder" H 3875 1950 50  0001 C CNN
+F 3 "~" H 3875 1950 50  0001 C CNN
+	1    3875 1950
+	1    0    0    -1  
+$EndComp
+$Comp
+L Transistor_BJT:2SA1015 Q6
+U 1 1 5CE5FC0F
+P 3775 2350
+F 0 "Q6" H 3966 2304 50  0000 L CNN
+F 1 "2SA1015" H 3966 2395 50  0000 L CNN
+F 2 "Package_TO_SOT_SMD:SOT-23" H 3975 2275 50  0001 L CIN
+F 3 "http://www.datasheetcatalog.org/datasheet/toshiba/905.pdf" H 3775 2350 50  0001 L CNN
+	1    3775 2350
+	1    0    0    1   
+$EndComp
+Wire Wire Line
+	3875 1850 3875 1800
+Wire Wire Line
+	3875 1800 3525 1800
+Wire Wire Line
+	3525 1800 3525 1900
+Wire Wire Line
+	3875 2050 3875 2100
+Wire Wire Line
+	3825 2100 3875 2100
+Connection ~ 3875 2100
+Wire Wire Line
+	3875 2100 3875 2150
+Wire Wire Line
+	3525 2400 3525 2350
+Wire Wire Line
+	3575 2350 3525 2350
+Connection ~ 3525 2350
+Wire Wire Line
+	3525 2350 3525 2300
+$Comp
+L power:GND #PWR0101
+U 1 1 5CE622F3
+P 3525 2675
+F 0 "#PWR0101" H 3525 2425 50  0001 C CNN
+F 1 "GND" H 3530 2502 50  0000 C CNN
+F 2 "" H 3525 2675 50  0001 C CNN
+F 3 "" H 3525 2675 50  0001 C CNN
+	1    3525 2675
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3525 2675 3525 2600
+$Comp
+L Device:R_Small R8
+U 1 1 5CE62BB8
+P 4525 2550
+F 0 "R8" H 4466 2504 50  0000 R CNN
+F 1 "10k" H 4466 2595 50  0000 R CNN
+F 2 "Resistor_SMD:R_0805_2012Metric_Pad1.15x1.40mm_HandSolder" H 4525 2550 50  0001 C CNN
+F 3 "~" H 4525 2550 50  0001 C CNN
+	1    4525 2550
+	1    0    0    1   
+$EndComp
+$Comp
+L Device:R_Small R10
+U 1 1 5CE654F5
+P 5200 2275
+F 0 "R10" H 5141 2229 50  0000 R CNN
+F 1 "10k" H 5141 2320 50  0000 R CNN
+F 2 "Resistor_SMD:R_0805_2012Metric_Pad1.15x1.40mm_HandSolder" H 5200 2275 50  0001 C CNN
+F 3 "~" H 5200 2275 50  0001 C CNN
+	1    5200 2275
+	1    0    0    1   
+$EndComp
+$Comp
+L Device:R_Small R1
+U 1 1 5CE6576B
+P 2825 2300
+F 0 "R1" H 2766 2254 50  0000 R CNN
+F 1 "10k" H 2766 2345 50  0000 R CNN
+F 2 "Resistor_SMD:R_0805_2012Metric_Pad1.15x1.40mm_HandSolder" H 2825 2300 50  0001 C CNN
+F 3 "~" H 2825 2300 50  0001 C CNN
+	1    2825 2300
+	1    0    0    1   
+$EndComp
+$Comp
+L Transistor_BJT:2SA1015 Q2
+U 1 1 5CE6629D
+P 2925 3425
+F 0 "Q2" H 3116 3379 50  0000 L CNN
+F 1 "2SA1015" H 3116 3470 50  0000 L CNN
+F 2 "Package_TO_SOT_SMD:SOT-23" H 3125 3350 50  0001 L CIN
+F 3 "http://www.datasheetcatalog.org/datasheet/toshiba/905.pdf" H 2925 3425 50  0001 L CNN
+	1    2925 3425
+	-1   0    0    1   
+$EndComp
+$Comp
+L Transistor_BJT:2SA1015 Q12
+U 1 1 5CE667B4
+P 5100 3425
+F 0 "Q12" H 5291 3379 50  0000 L CNN
+F 1 "2SA1015" H 5291 3470 50  0000 L CNN
+F 2 "Package_TO_SOT_SMD:SOT-23" H 5300 3350 50  0001 L CIN
+F 3 "http://www.datasheetcatalog.org/datasheet/toshiba/905.pdf" H 5100 3425 50  0001 L CNN
+	1    5100 3425
+	1    0    0    1   
+$EndComp
+Wire Wire Line
+	3125 3425 3200 3425
+Wire Wire Line
+	2825 2200 2825 1800
+Wire Wire Line
+	2825 1800 3525 1800
+Connection ~ 3525 1800
+Wire Wire Line
+	3875 1800 4025 1800
+Wire Wire Line
+	5200 1800 5200 2175
+Connection ~ 3875 1800
+Wire Wire Line
+	4525 2450 4525 1800
+Connection ~ 4525 1800
+Wire Wire Line
+	4525 1800 5200 1800
+Wire Wire Line
+	2825 2400 2825 2975
+Wire Wire Line
+	4375 2975 2825 2975
+Connection ~ 2825 2975
+Wire Wire Line
+	2825 2975 2825 3225
+Wire Wire Line
+	4525 2825 4525 2650
+Wire Wire Line
+	4675 2975 5200 2975
+Wire Wire Line
+	5200 2975 5200 2375
+Wire Wire Line
+	5200 3225 5200 2975
+Connection ~ 5200 2975
+Wire Wire Line
+	2825 3725 3200 3725
+Wire Wire Line
+	3200 3725 3200 3425
+Connection ~ 3200 3425
+Wire Wire Line
+	3200 3425 4900 3425
+Wire Wire Line
+	2825 3625 2825 3725
+Connection ~ 2825 3725
+Wire Wire Line
+	2825 3725 2825 3825
+$Comp
+L Transistor_BJT:2SC1815 Q13
+U 1 1 5CE6B07F
+P 5100 4025
+F 0 "Q13" H 5290 4071 50  0000 L CNN
+F 1 "2SC1815" H 5290 3980 50  0000 L CNN
+F 2 "Package_TO_SOT_SMD:SOT-23" H 5300 3950 50  0001 L CIN
+F 3 "https://media.digikey.com/pdf/Data%20Sheets/Toshiba%20PDFs/2SC1815.pdf" H 5100 4025 50  0001 L CNN
+	1    5100 4025
+	1    0    0    -1  
+$EndComp
+$Comp
+L Transistor_BJT:2SC1815 Q8
+U 1 1 5CE6C6F6
+P 4125 4025
+F 0 "Q8" H 4315 4071 50  0000 L CNN
+F 1 "2SC1815" H 4315 3980 50  0000 L CNN
+F 2 "Package_TO_SOT_SMD:SOT-23" H 4325 3950 50  0001 L CIN
+F 3 "https://media.digikey.com/pdf/Data%20Sheets/Toshiba%20PDFs/2SC1815.pdf" H 4125 4025 50  0001 L CNN
+	1    4125 4025
+	1    0    0    -1  
+$EndComp
+$Comp
+L Transistor_BJT:2SC1815 Q4
+U 1 1 5CE6DEE8
+P 3300 4300
+F 0 "Q4" H 3491 4346 50  0000 L CNN
+F 1 "2SC1815" H 3491 4255 50  0000 L CNN
+F 2 "Package_TO_SOT_SMD:SOT-23" H 3500 4225 50  0001 L CIN
+F 3 "https://media.digikey.com/pdf/Data%20Sheets/Toshiba%20PDFs/2SC1815.pdf" H 3300 4300 50  0001 L CNN
+	1    3300 4300
+	-1   0    0    -1  
+$EndComp
+$Comp
+L Transistor_BJT:2SC1815 Q11
+U 1 1 5CE6F6D2
+P 4725 4300
+F 0 "Q11" H 4915 4346 50  0000 L CNN
+F 1 "2SC1815" H 4915 4255 50  0000 L CNN
+F 2 "Package_TO_SOT_SMD:SOT-23" H 4925 4225 50  0001 L CIN
+F 3 "https://media.digikey.com/pdf/Data%20Sheets/Toshiba%20PDFs/2SC1815.pdf" H 4725 4300 50  0001 L CNN
+	1    4725 4300
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3500 4300 3875 4300
+Wire Wire Line
+	4825 4100 4825 4025
+Wire Wire Line
+	4825 4025 4900 4025
+Wire Wire Line
+	3125 4025 3200 4025
+Wire Wire Line
+	3200 4025 3200 4100
+$Comp
+L power:VCC #PWR0102
+U 1 1 5CE73DEC
+P 4225 3750
+F 0 "#PWR0102" H 4225 3600 50  0001 C CNN
+F 1 "VCC" H 4242 3923 50  0000 C CNN
+F 2 "" H 4225 3750 50  0001 C CNN
+F 3 "" H 4225 3750 50  0001 C CNN
+	1    4225 3750
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4225 3750 4225 3825
+Wire Wire Line
+	3875 2550 3875 4025
+Connection ~ 3875 4300
+Connection ~ 3200 4025
+Wire Wire Line
+	3200 4025 3875 4025
+Connection ~ 3875 4025
+Wire Wire Line
+	3875 4025 3875 4300
+Wire Wire Line
+	3875 4025 3925 4025
+$Comp
+L power:VCC #PWR0103
+U 1 1 5CE78279
+P 4025 1750
+F 0 "#PWR0103" H 4025 1600 50  0001 C CNN
+F 1 "VCC" H 4042 1923 50  0000 C CNN
+F 2 "" H 4025 1750 50  0001 C CNN
+F 3 "" H 4025 1750 50  0001 C CNN
+	1    4025 1750
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4025 1750 4025 1800
+Wire Wire Line
+	3875 4300 4450 4300
+$Comp
+L Reference_Voltage:TL431DBV U1
+U 1 1 5CE7967E
+P 4225 4775
+F 0 "U1" V 4271 4705 50  0000 R CNN
+F 1 "TL431DBV" V 4180 4705 50  0000 R CNN
+F 2 "Package_TO_SOT_SMD:SOT-23-5" H 4225 4525 50  0001 C CIN
+F 3 "http://www.ti.com/lit/ds/symlink/tl431.pdf" H 4225 4775 50  0001 C CIN
+	1    4225 4775
+	0    -1   -1   0   
+$EndComp
+$Comp
+L Device:R_Small R5
+U 1 1 5CE7A8EC
+P 4050 4600
+F 0 "R5" H 3991 4554 50  0000 R CNN
+F 1 "5.6k" H 3991 4645 50  0000 R CNN
+F 2 "Resistor_SMD:R_0805_2012Metric_Pad1.15x1.40mm_HandSolder" H 4050 4600 50  0001 C CNN
+F 3 "~" H 4050 4600 50  0001 C CNN
+	1    4050 4600
+	1    0    0    1   
+$EndComp
+$Comp
+L Device:R_Small R6
+U 1 1 5CE7B7B7
+P 4050 4950
+F 0 "R6" H 3991 4904 50  0000 R CNN
+F 1 "10k" H 3991 4995 50  0000 R CNN
+F 2 "Resistor_SMD:R_0805_2012Metric_Pad1.15x1.40mm_HandSolder" H 4050 4950 50  0001 C CNN
+F 3 "~" H 4050 4950 50  0001 C CNN
+	1    4050 4950
+	1    0    0    1   
+$EndComp
+Wire Wire Line
+	4225 4225 4225 4425
+Wire Wire Line
+	4050 4500 4050 4425
+Wire Wire Line
+	4050 4425 4225 4425
+Connection ~ 4225 4425
+Wire Wire Line
+	4225 4425 4225 4675
+Wire Wire Line
+	4050 4700 4050 4775
+Connection ~ 4050 4775
+Wire Wire Line
+	4050 4775 4050 4850
+Wire Wire Line
+	4125 4775 4050 4775
+Wire Wire Line
+	4225 4875 4225 5125
+Wire Wire Line
+	4050 5050 4050 5125
+Wire Wire Line
+	4050 5125 4225 5125
+Connection ~ 4225 5125
+Wire Wire Line
+	4450 4300 4450 4025
+Wire Wire Line
+	4450 4025 4825 4025
+Connection ~ 4450 4300
+Wire Wire Line
+	4450 4300 4525 4300
+Connection ~ 4825 4025
+$Comp
+L Device:R_Small R2
+U 1 1 5CE83C58
+P 2825 4750
+F 0 "R2" H 2767 4704 50  0000 R CNN
+F 1 "10R" H 2767 4795 50  0000 R CNN
+F 2 "Resistor_SMD:R_0805_2012Metric_Pad1.15x1.40mm_HandSolder" H 2825 4750 50  0001 C CNN
+F 3 "~" H 2825 4750 50  0001 C CNN
+	1    2825 4750
+	1    0    0    1   
+$EndComp
+Wire Wire Line
+	3200 4500 3200 4575
+Wire Wire Line
+	3200 4575 2825 4575
+Wire Wire Line
+	2825 4575 2825 4225
+Wire Wire Line
+	2825 4575 2825 4650
+Connection ~ 2825 4575
+$Comp
+L Transistor_BJT:2SA1015 Q1
+U 1 1 5CE88843
+P 2725 5125
+F 0 "Q1" H 2916 5079 50  0000 L CNN
+F 1 "2SA1015" H 2916 5170 50  0000 L CNN
+F 2 "Package_TO_SOT_SMD:SOT-23" H 2925 5050 50  0001 L CIN
+F 3 "http://www.datasheetcatalog.org/datasheet/toshiba/905.pdf" H 2725 5125 50  0001 L CNN
+	1    2725 5125
+	1    0    0    1   
+$EndComp
+Wire Wire Line
+	5200 3625 5200 3700
+Wire Wire Line
+	5200 4225 5200 4575
+Wire Wire Line
+	4825 4500 4825 4575
+Wire Wire Line
+	4825 4575 5200 4575
+Connection ~ 5200 4575
+Wire Wire Line
+	5200 4575 5200 4650
+$Comp
+L Device:R_Small R11
+U 1 1 5CE8DFF3
+P 5200 4750
+F 0 "R11" H 5142 4704 50  0000 R CNN
+F 1 "10R" H 5142 4795 50  0000 R CNN
+F 2 "Resistor_SMD:R_0805_2012Metric_Pad1.15x1.40mm_HandSolder" H 5200 4750 50  0001 C CNN
+F 3 "~" H 5200 4750 50  0001 C CNN
+	1    5200 4750
+	1    0    0    1   
+$EndComp
+$Comp
+L Transistor_BJT:2SA1015 Q14
+U 1 1 5CE8ECD5
+P 5300 5125
+F 0 "Q14" H 5491 5079 50  0000 L CNN
+F 1 "2SA1015" H 5491 5170 50  0000 L CNN
+F 2 "Package_TO_SOT_SMD:SOT-23" H 5500 5050 50  0001 L CIN
+F 3 "http://www.datasheetcatalog.org/datasheet/toshiba/905.pdf" H 5300 5125 50  0001 L CNN
+	1    5300 5125
+	-1   0    0    1   
+$EndComp
+Wire Wire Line
+	2825 4850 2825 4925
+Wire Wire Line
+	5200 4850 5200 4925
+Wire Wire Line
+	2825 5325 2825 5400
+Wire Wire Line
+	2825 5400 3825 5400
+Wire Wire Line
+	5200 5400 5200 5325
+$Comp
+L Transistor_BJT:2SA1015 Q7
+U 1 1 5CE9543F
+P 3925 5675
+F 0 "Q7" H 4116 5629 50  0000 L CNN
+F 1 "2SA1015" H 4116 5720 50  0000 L CNN
+F 2 "Package_TO_SOT_SMD:SOT-23" H 4125 5600 50  0001 L CIN
+F 3 "http://www.datasheetcatalog.org/datasheet/toshiba/905.pdf" H 3925 5675 50  0001 L CNN
+	1    3925 5675
+	-1   0    0    1   
+$EndComp
+$Comp
+L Transistor_BJT:2SC1815 Q9
+U 1 1 5CE9686B
+P 4325 6025
+F 0 "Q9" H 4516 6071 50  0000 L CNN
+F 1 "2SC1815" H 4516 5980 50  0000 L CNN
+F 2 "Package_TO_SOT_SMD:SOT-23" H 4525 5950 50  0001 L CIN
+F 3 "https://media.digikey.com/pdf/Data%20Sheets/Toshiba%20PDFs/2SC1815.pdf" H 4325 6025 50  0001 L CNN
+	1    4325 6025
+	-1   0    0    -1  
+$EndComp
+Wire Wire Line
+	4225 5125 4225 5675
+Wire Wire Line
+	4125 5675 4225 5675
+Connection ~ 4225 5675
+Wire Wire Line
+	4225 5675 4225 5825
+Wire Wire Line
+	3825 5475 3825 5400
+Connection ~ 3825 5400
+Wire Wire Line
+	3825 5400 5200 5400
+$Comp
+L Transistor_BJT:2SC1815 Q10
+U 1 1 5CEA07D5
+P 4500 6300
+F 0 "Q10" H 4690 6346 50  0000 L CNN
+F 1 "2SC1815" H 4690 6255 50  0000 L CNN
+F 2 "Package_TO_SOT_SMD:SOT-23" H 4700 6225 50  0001 L CIN
+F 3 "https://media.digikey.com/pdf/Data%20Sheets/Toshiba%20PDFs/2SC1815.pdf" H 4500 6300 50  0001 L CNN
+	1    4500 6300
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R_Small R7
+U 1 1 5CEA28E9
+P 4225 6475
+F 0 "R7" H 4167 6429 50  0000 R CNN
+F 1 "33R" H 4167 6520 50  0000 R CNN
+F 2 "Resistor_SMD:R_0805_2012Metric_Pad1.15x1.40mm_HandSolder" H 4225 6475 50  0001 C CNN
+F 3 "~" H 4225 6475 50  0001 C CNN
+	1    4225 6475
+	1    0    0    1   
+$EndComp
+$Comp
+L Device:R_Small R9
+U 1 1 5CEA2FC8
+P 4600 5850
+F 0 "R9" H 4542 5804 50  0000 R CNN
+F 1 "1k" H 4542 5895 50  0000 R CNN
+F 2 "Resistor_SMD:R_0805_2012Metric_Pad1.15x1.40mm_HandSolder" H 4600 5850 50  0001 C CNN
+F 3 "~" H 4600 5850 50  0001 C CNN
+	1    4600 5850
+	1    0    0    1   
+$EndComp
+Wire Wire Line
+	4600 5950 4600 6025
+Wire Wire Line
+	4525 6025 4600 6025
+Connection ~ 4600 6025
+Wire Wire Line
+	4600 6025 4600 6100
+Wire Wire Line
+	4225 6225 4225 6300
+Wire Wire Line
+	4300 6300 4225 6300
+Connection ~ 4225 6300
+Wire Wire Line
+	4225 6300 4225 6375
+Wire Wire Line
+	4225 6575 4225 6650
+Wire Wire Line
+	4225 6650 4600 6650
+Wire Wire Line
+	4600 6650 4600 6500
+$Comp
+L power:GND #PWR0104
+U 1 1 5CEAC956
+P 4600 5675
+F 0 "#PWR0104" H 4600 5425 50  0001 C CNN
+F 1 "GND" H 4605 5502 50  0000 C CNN
+F 2 "" H 4600 5675 50  0001 C CNN
+F 3 "" H 4600 5675 50  0001 C CNN
+	1    4600 5675
+	-1   0    0    1   
+$EndComp
+Wire Wire Line
+	4600 5675 4600 5750
+Wire Wire Line
+	3825 5875 3825 6650
+Wire Wire Line
+	3825 6650 4225 6650
+Connection ~ 4225 6650
+$Comp
+L power:VSS #PWR0105
+U 1 1 5CEB17D9
+P 4600 6725
+F 0 "#PWR0105" H 4600 6575 50  0001 C CNN
+F 1 "VSS" H 4618 6898 50  0000 C CNN
+F 2 "" H 4600 6725 50  0001 C CNN
+F 3 "" H 4600 6725 50  0001 C CNN
+	1    4600 6725
+	-1   0    0    1   
+$EndComp
+Wire Wire Line
+	4600 6725 4600 6650
+Connection ~ 4600 6650
+$Comp
+L Connector:Conn_01x06_Male J1
+U 1 1 5CEB4C61
+P 900 3875
+F 0 "J1" H 1008 4256 50  0000 C CNN
+F 1 "Conn_01x06_Male" H 1008 4165 50  0000 C CNN
+F 2 "acheronConnectors:male6pinHeader" H 900 3875 50  0001 C CNN
+F 3 "~" H 900 3875 50  0001 C CNN
+	1    900  3875
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	1225 4175 1100 4175
+Wire Wire Line
+	1100 3975 1225 3975
+Wire Wire Line
+	1100 3775 1225 3775
+Wire Wire Line
+	1100 4075 1225 4075
+Wire Wire Line
+	1225 3675 1100 3675
+Text GLabel 1225 3975 2    50   Input ~ 0
+V+
+Text GLabel 1225 4075 2    50   Input ~ 0
+V-
+$Comp
+L power:GND #PWR0106
+U 1 1 5CEC147A
+P 1225 3775
+F 0 "#PWR0106" H 1225 3525 50  0001 C CNN
+F 1 "GND" V 1230 3647 50  0000 R CNN
+F 2 "" H 1225 3775 50  0001 C CNN
+F 3 "" H 1225 3775 50  0001 C CNN
+	1    1225 3775
+	0    -1   -1   0   
+$EndComp
+$Comp
+L power:VCC #PWR0107
+U 1 1 5CEC20F4
+P 1225 4250
+F 0 "#PWR0107" H 1225 4100 50  0001 C CNN
+F 1 "VCC" H 1242 4423 50  0000 C CNN
+F 2 "" H 1225 4250 50  0001 C CNN
+F 3 "" H 1225 4250 50  0001 C CNN
+	1    1225 4250
+	-1   0    0    1   
+$EndComp
+$Comp
+L power:VSS #PWR0108
+U 1 1 5CEC27ED
+P 1225 3600
+F 0 "#PWR0108" H 1225 3450 50  0001 C CNN
+F 1 "VSS" H 1243 3773 50  0000 C CNN
+F 2 "" H 1225 3600 50  0001 C CNN
+F 3 "" H 1225 3600 50  0001 C CNN
+	1    1225 3600
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	1225 4250 1225 4175
+Wire Wire Line
+	1225 3600 1225 3675
+Text GLabel 2450 5125 0    50   Input ~ 0
+V+
+Wire Wire Line
+	2450 5125 2525 5125
+Text GLabel 5575 5125 2    50   Input ~ 0
+V-
+Wire Wire Line
+	5575 5125 5500 5125
+Connection ~ 4025 1800
+Wire Wire Line
+	4025 1800 4525 1800
+Wire Wire Line
+	2825 3725 2750 3725
+Text GLabel 2750 3725 0    50   Output ~ 0
+1+
+Text GLabel 5325 3700 2    50   Output ~ 0
+1-
+Wire Wire Line
+	5325 3700 5200 3700
+Connection ~ 5200 3700
+Wire Wire Line
+	5200 3700 5200 3825
+$Comp
+L Device:C_Small C1
+U 1 1 5CEF4607
+P 6225 3150
+F 0 "C1" H 6133 3104 50  0000 R CNN
+F 1 "33p" H 6133 3195 50  0000 R CNN
+F 2 "Capacitor_SMD:C_0805_2012Metric_Pad1.15x1.40mm_HandSolder" H 6225 3150 50  0001 C CNN
+F 3 "~" H 6225 3150 50  0001 C CNN
+	1    6225 3150
+	1    0    0    1   
+$EndComp
+$Comp
+L Device:R_Small R13
+U 1 1 5CF0A0BC
+P 6700 2975
+F 0 "R13" H 6642 2929 50  0000 R CNN
+F 1 "2k" H 6642 3020 50  0000 R CNN
+F 2 "Resistor_SMD:R_0805_2012Metric_Pad1.15x1.40mm_HandSolder" H 6700 2975 50  0001 C CNN
+F 3 "~" H 6700 2975 50  0001 C CNN
+	1    6700 2975
+	1    0    0    1   
+$EndComp
+$Comp
+L Transistor_BJT:2SA1015 Q17
+U 1 1 5CF0A0C2
+P 6800 2575
+F 0 "Q17" H 6991 2529 50  0000 L CNN
+F 1 "2SA1015" H 6991 2620 50  0000 L CNN
+F 2 "Package_TO_SOT_SMD:SOT-23" H 7000 2500 50  0001 L CIN
+F 3 "http://www.datasheetcatalog.org/datasheet/toshiba/905.pdf" H 6800 2575 50  0001 L CNN
+	1    6800 2575
+	-1   0    0    1   
+$EndComp
+$Comp
+L Device:R_Small R14
+U 1 1 5CF0A0C8
+P 7050 2425
+F 0 "R14" H 7109 2471 50  0000 L CNN
+F 1 "33R" H 7109 2380 50  0000 L CNN
+F 2 "Resistor_SMD:R_0805_2012Metric_Pad1.15x1.40mm_HandSolder" H 7050 2425 50  0001 C CNN
+F 3 "~" H 7050 2425 50  0001 C CNN
+	1    7050 2425
+	1    0    0    -1  
+$EndComp
+$Comp
+L Transistor_BJT:2SA1015 Q18
+U 1 1 5CF0A0CE
+P 6950 2825
+F 0 "Q18" H 7141 2779 50  0000 L CNN
+F 1 "2SA1015" H 7141 2870 50  0000 L CNN
+F 2 "Package_TO_SOT_SMD:SOT-23" H 7150 2750 50  0001 L CIN
+F 3 "http://www.datasheetcatalog.org/datasheet/toshiba/905.pdf" H 6950 2825 50  0001 L CNN
+	1    6950 2825
+	1    0    0    1   
+$EndComp
+Wire Wire Line
+	7050 2325 7050 2275
+Wire Wire Line
+	7050 2275 6700 2275
+Wire Wire Line
+	6700 2275 6700 2375
+Wire Wire Line
+	7050 2525 7050 2575
+Wire Wire Line
+	7000 2575 7050 2575
+Connection ~ 7050 2575
+Wire Wire Line
+	7050 2575 7050 2625
+Wire Wire Line
+	6700 2875 6700 2825
+Wire Wire Line
+	6750 2825 6700 2825
+Connection ~ 6700 2825
+Wire Wire Line
+	6700 2825 6700 2775
+$Comp
+L power:GND #PWR0109
+U 1 1 5CF0A0DF
+P 6700 3150
+F 0 "#PWR0109" H 6700 2900 50  0001 C CNN
+F 1 "GND" H 6705 2977 50  0000 C CNN
+F 2 "" H 6700 3150 50  0001 C CNN
+F 3 "" H 6700 3150 50  0001 C CNN
+	1    6700 3150
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	6700 3150 6700 3075
+Connection ~ 6700 2275
+Wire Wire Line
+	7050 2275 7200 2275
+Connection ~ 7050 2275
+$Comp
+L power:VCC #PWR0110
+U 1 1 5CF0A0EB
+P 7200 2225
+F 0 "#PWR0110" H 7200 2075 50  0001 C CNN
+F 1 "VCC" H 7217 2398 50  0000 C CNN
+F 2 "" H 7200 2225 50  0001 C CNN
+F 3 "" H 7200 2225 50  0001 C CNN
+	1    7200 2225
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	7200 2225 7200 2275
+Connection ~ 7200 2275
+Wire Wire Line
+	7500 3425 7500 3500
+Wire Wire Line
+	6600 3500 6600 3425
+Wire Wire Line
+	6225 3700 6225 3250
+Wire Wire Line
+	6300 3700 6225 3700
+$Comp
+L Diode:1N4148W D2
+U 1 1 5CF26AE4
+P 7500 4500
+F 0 "D2" V 7546 4420 50  0000 R CNN
+F 1 "1N4148W" V 7455 4420 50  0000 R CNN
+F 2 "Diode_SMD:D_SOD-123" H 7500 4325 50  0001 C CNN
+F 3 "https://www.vishay.com/docs/85748/1n4148w.pdf" H 7500 4500 50  0001 C CNN
+	1    7500 4500
+	0    -1   -1   0   
+$EndComp
+$Comp
+L Diode:1N4148W D1
+U 1 1 5CF25679
+P 7500 4125
+F 0 "D1" V 7546 4045 50  0000 R CNN
+F 1 "1N4148W" V 7455 4045 50  0000 R CNN
+F 2 "Diode_SMD:D_SOD-123" H 7500 3950 50  0001 C CNN
+F 3 "https://www.vishay.com/docs/85748/1n4148w.pdf" H 7500 4125 50  0001 C CNN
+	1    7500 4125
+	0    -1   -1   0   
+$EndComp
+$Comp
+L Transistor_BJT:2SA1015 Q20
+U 1 1 5CF2470D
+P 7600 3700
+F 0 "Q20" H 7791 3654 50  0000 L CNN
+F 1 "2SA1015" H 7791 3745 50  0000 L CNN
+F 2 "Package_TO_SOT_SMD:SOT-23" H 7800 3625 50  0001 L CIN
+F 3 "http://www.datasheetcatalog.org/datasheet/toshiba/905.pdf" H 7600 3700 50  0001 L CNN
+	1    7600 3700
+	-1   0    0    1   
+$EndComp
+$Comp
+L Transistor_BJT:2SA1015 Q15
+U 1 1 5CF22C81
+P 6500 3700
+F 0 "Q15" H 6691 3654 50  0000 L CNN
+F 1 "2SA1015" H 6691 3745 50  0000 L CNN
+F 2 "Package_TO_SOT_SMD:SOT-23" H 6700 3625 50  0001 L CIN
+F 3 "http://www.datasheetcatalog.org/datasheet/toshiba/905.pdf" H 6500 3700 50  0001 L CNN
+	1    6500 3700
+	1    0    0    1   
+$EndComp
+Wire Wire Line
+	6225 2275 6700 2275
+$Comp
+L Transistor_BJT:2SC1815 Q16
+U 1 1 5CF54574
+P 6700 4925
+F 0 "Q16" H 6891 4971 50  0000 L CNN
+F 1 "2SC1815" H 6891 4880 50  0000 L CNN
+F 2 "Package_TO_SOT_SMD:SOT-23" H 6900 4850 50  0001 L CIN
+F 3 "https://media.digikey.com/pdf/Data%20Sheets/Toshiba%20PDFs/2SC1815.pdf" H 6700 4925 50  0001 L CNN
+	1    6700 4925
+	-1   0    0    -1  
+$EndComp
+$Comp
+L Transistor_BJT:2SC1815 Q19
+U 1 1 5CF56103
+P 7400 4925
+F 0 "Q19" H 7590 4971 50  0000 L CNN
+F 1 "2SC1815" H 7590 4880 50  0000 L CNN
+F 2 "Package_TO_SOT_SMD:SOT-23" H 7600 4850 50  0001 L CIN
+F 3 "https://media.digikey.com/pdf/Data%20Sheets/Toshiba%20PDFs/2SC1815.pdf" H 7400 4925 50  0001 L CNN
+	1    7400 4925
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R_Small R12
+U 1 1 5CF5676D
+P 6600 5300
+F 0 "R12" H 6541 5254 50  0000 R CNN
+F 1 "1R" H 6541 5345 50  0000 R CNN
+F 2 "Resistor_SMD:R_0805_2012Metric_Pad1.15x1.40mm_HandSolder" H 6600 5300 50  0001 C CNN
+F 3 "~" H 6600 5300 50  0001 C CNN
+	1    6600 5300
+	1    0    0    1   
+$EndComp
+$Comp
+L Device:R_Small R15
+U 1 1 5CF57354
+P 7500 5300
+F 0 "R15" H 7441 5254 50  0000 R CNN
+F 1 "1R" H 7441 5345 50  0000 R CNN
+F 2 "Resistor_SMD:R_0805_2012Metric_Pad1.15x1.40mm_HandSolder" H 7500 5300 50  0001 C CNN
+F 3 "~" H 7500 5300 50  0001 C CNN
+	1    7500 5300
+	1    0    0    1   
+$EndComp
+Wire Wire Line
+	7500 5400 7500 5475
+Wire Wire Line
+	7500 5475 7075 5475
+Wire Wire Line
+	6600 5475 6600 5400
+Wire Wire Line
+	6600 3425 7050 3425
+Wire Wire Line
+	6225 2275 6225 3050
+Wire Wire Line
+	7050 3025 7050 3425
+Connection ~ 7050 3425
+Wire Wire Line
+	7050 3425 7500 3425
+Wire Wire Line
+	6600 5200 6600 5125
+Wire Wire Line
+	6600 4725 6600 4650
+Wire Wire Line
+	6900 4925 7075 4925
+Wire Wire Line
+	7075 4925 7075 4650
+Wire Wire Line
+	7075 4650 6600 4650
+Connection ~ 7075 4925
+Wire Wire Line
+	7075 4925 7200 4925
+Connection ~ 6600 4650
+Wire Wire Line
+	6600 4650 6600 3900
+Wire Wire Line
+	7500 4725 7500 4700
+Wire Wire Line
+	7500 4350 7500 4325
+Wire Wire Line
+	7500 3975 7500 3925
+Wire Wire Line
+	7500 5200 7500 5125
+Wire Wire Line
+	7075 5475 7075 5550
+Connection ~ 7075 5475
+Wire Wire Line
+	7075 5475 6600 5475
+$Comp
+L power:VSS #PWR0111
+U 1 1 5CF97CC0
+P 7075 5550
+F 0 "#PWR0111" H 7075 5400 50  0001 C CNN
+F 1 "VSS" H 7093 5723 50  0000 C CNN
+F 2 "" H 7075 5550 50  0001 C CNN
+F 3 "" H 7075 5550 50  0001 C CNN
+	1    7075 5550
+	-1   0    0    1   
+$EndComp
+$Comp
+L Device:C_Small C2
+U 1 1 5CF97FED
+P 8050 4150
+F 0 "C2" H 7958 4196 50  0000 R CNN
+F 1 "33p" H 7958 4105 50  0000 R CNN
+F 2 "Capacitor_SMD:C_0805_2012Metric_Pad1.15x1.40mm_HandSolder" H 8050 4150 50  0001 C CNN
+F 3 "~" H 8050 4150 50  0001 C CNN
+	1    8050 4150
+	-1   0    0    -1  
+$EndComp
+Wire Wire Line
+	7500 4325 8050 4325
+Wire Wire Line
+	8050 4325 8050 4250
+Connection ~ 7500 4325
+Wire Wire Line
+	7500 4325 7500 4275
+Wire Wire Line
+	8050 4050 8050 3700
+Wire Wire Line
+	8050 3700 7800 3700
+Connection ~ 7500 3925
+Wire Wire Line
+	7500 3925 7500 3900
+Wire Wire Line
+	7500 4700 8475 4700
+Connection ~ 7500 4700
+Wire Wire Line
+	7500 4700 7500 4650
+Text GLabel 8175 3700 2    50   Input ~ 0
+1-
+Wire Wire Line
+	8175 3700 8050 3700
+Text GLabel 6125 3700 0    50   Input ~ 0
+1+
+Wire Wire Line
+	6125 3700 6225 3700
+$Comp
+L Device:R_Small R16
+U 1 1 5CFC7FC0
+P 8425 2975
+F 0 "R16" H 8367 2929 50  0000 R CNN
+F 1 "2k" H 8367 3020 50  0000 R CNN
+F 2 "Resistor_SMD:R_0805_2012Metric_Pad1.15x1.40mm_HandSolder" H 8425 2975 50  0001 C CNN
+F 3 "~" H 8425 2975 50  0001 C CNN
+	1    8425 2975
+	1    0    0    1   
+$EndComp
+$Comp
+L Transistor_BJT:2SA1015 Q21
+U 1 1 5CFC7FC6
+P 8525 2575
+F 0 "Q21" H 8716 2529 50  0000 L CNN
+F 1 "2SA1015" H 8716 2620 50  0000 L CNN
+F 2 "Package_TO_SOT_SMD:SOT-23" H 8725 2500 50  0001 L CIN
+F 3 "http://www.datasheetcatalog.org/datasheet/toshiba/905.pdf" H 8525 2575 50  0001 L CNN
+	1    8525 2575
+	-1   0    0    1   
+$EndComp
+$Comp
+L Device:R_Small R17
+U 1 1 5CFC7FCC
+P 8775 2425
+F 0 "R17" H 8834 2471 50  0000 L CNN
+F 1 "1k" H 8834 2380 50  0000 L CNN
+F 2 "Resistor_SMD:R_0805_2012Metric_Pad1.15x1.40mm_HandSolder" H 8775 2425 50  0001 C CNN
+F 3 "~" H 8775 2425 50  0001 C CNN
+	1    8775 2425
+	1    0    0    -1  
+$EndComp
+$Comp
+L Transistor_BJT:2SA1015 Q22
+U 1 1 5CFC7FD2
+P 8675 2825
+F 0 "Q22" H 8866 2779 50  0000 L CNN
+F 1 "2SA1015" H 8866 2870 50  0000 L CNN
+F 2 "Package_TO_SOT_SMD:SOT-23" H 8875 2750 50  0001 L CIN
+F 3 "http://www.datasheetcatalog.org/datasheet/toshiba/905.pdf" H 8675 2825 50  0001 L CNN
+	1    8675 2825
+	1    0    0    1   
+$EndComp
+Wire Wire Line
+	8775 2325 8775 2275
+Wire Wire Line
+	8775 2275 8425 2275
+Wire Wire Line
+	8425 2275 8425 2375
+Wire Wire Line
+	8775 2525 8775 2575
+Wire Wire Line
+	8725 2575 8775 2575
+Connection ~ 8775 2575
+Wire Wire Line
+	8775 2575 8775 2625
+Wire Wire Line
+	8425 2875 8425 2825
+Wire Wire Line
+	8475 2825 8425 2825
+Connection ~ 8425 2825
+Wire Wire Line
+	8425 2825 8425 2775
+$Comp
+L power:GND #PWR0112
+U 1 1 5CFC7FE3
+P 8425 3150
+F 0 "#PWR0112" H 8425 2900 50  0001 C CNN
+F 1 "GND" H 8430 2977 50  0000 C CNN
+F 2 "" H 8425 3150 50  0001 C CNN
+F 3 "" H 8425 3150 50  0001 C CNN
+	1    8425 3150
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	8425 3150 8425 3075
+Connection ~ 8425 2275
+Connection ~ 8775 2275
+$Comp
+L Transistor_BJT:2SA1015 Q23
+U 1 1 5CFCDE28
+P 8675 3925
+F 0 "Q23" H 8866 3879 50  0000 L CNN
+F 1 "2SA1015" H 8866 3970 50  0000 L CNN
+F 2 "Package_TO_SOT_SMD:SOT-23" H 8875 3850 50  0001 L CIN
+F 3 "http://www.datasheetcatalog.org/datasheet/toshiba/905.pdf" H 8675 3925 50  0001 L CNN
+	1    8675 3925
+	1    0    0    1   
+$EndComp
+$Comp
+L Transistor_BJT:2SA1015 Q24
+U 1 1 5CFCEFCC
+P 8675 4700
+F 0 "Q24" H 8866 4654 50  0000 L CNN
+F 1 "2SA1015" H 8866 4745 50  0000 L CNN
+F 2 "Package_TO_SOT_SMD:SOT-23" H 8875 4625 50  0001 L CIN
+F 3 "http://www.datasheetcatalog.org/datasheet/toshiba/905.pdf" H 8675 4700 50  0001 L CNN
+	1    8675 4700
+	1    0    0    1   
+$EndComp
+Wire Wire Line
+	7500 5475 8775 5475
+Wire Wire Line
+	8775 3025 8775 3175
+Connection ~ 7500 5475
+Wire Wire Line
+	8775 4125 8775 4325
+Wire Wire Line
+	8775 4900 8775 5475
+Wire Wire Line
+	7500 3925 8400 3925
+Wire Wire Line
+	7200 2275 8425 2275
+$Comp
+L Transistor_BJT:2SC1815 Q25
+U 1 1 5CFE257D
+P 9775 3175
+F 0 "Q25" H 9965 3221 50  0000 L CNN
+F 1 "2SC1815" H 9965 3130 50  0000 L CNN
+F 2 "Package_TO_SOT_SMD:SOT-23" H 9975 3100 50  0001 L CIN
+F 3 "https://media.digikey.com/pdf/Data%20Sheets/Toshiba%20PDFs/2SC1815.pdf" H 9775 3175 50  0001 L CNN
+	1    9775 3175
+	1    0    0    -1  
+$EndComp
+$Comp
+L Transistor_BJT:2SA1015 Q26
+U 1 1 5CFE33B5
+P 9775 4325
+F 0 "Q26" H 9966 4279 50  0000 L CNN
+F 1 "2SA1015" H 9966 4370 50  0000 L CNN
+F 2 "Package_TO_SOT_SMD:SOT-23" H 9975 4250 50  0001 L CIN
+F 3 "http://www.datasheetcatalog.org/datasheet/toshiba/905.pdf" H 9775 4325 50  0001 L CNN
+	1    9775 4325
+	1    0    0    1   
+$EndComp
+$Comp
+L Device:R_Small R18
+U 1 1 5CFE5839
+P 9875 3575
+F 0 "R18" H 9816 3529 50  0000 R CNN
+F 1 "1R" H 9816 3620 50  0000 R CNN
+F 2 "Resistor_SMD:R_0805_2012Metric_Pad1.15x1.40mm_HandSolder" H 9875 3575 50  0001 C CNN
+F 3 "~" H 9875 3575 50  0001 C CNN
+	1    9875 3575
+	1    0    0    1   
+$EndComp
+$Comp
+L Device:R_Small R19
+U 1 1 5CFE5E9A
+P 9875 3950
+F 0 "R19" H 9816 3904 50  0000 R CNN
+F 1 "1R" H 9816 3995 50  0000 R CNN
+F 2 "Resistor_SMD:R_0805_2012Metric_Pad1.15x1.40mm_HandSolder" H 9875 3950 50  0001 C CNN
+F 3 "~" H 9875 3950 50  0001 C CNN
+	1    9875 3950
+	1    0    0    1   
+$EndComp
+$Comp
+L Diode:1N4148W D3
+U 1 1 5CFED830
+P 9350 3525
+F 0 "D3" H 9350 3308 50  0000 C CNN
+F 1 "1N4148W" H 9350 3399 50  0000 C CNN
+F 2 "Diode_SMD:D_SOD-123" H 9350 3350 50  0001 C CNN
+F 3 "https://www.vishay.com/docs/85748/1n4148w.pdf" H 9350 3525 50  0001 C CNN
+	1    9350 3525
+	-1   0    0    1   
+$EndComp
+$Comp
+L Diode:1N4148W D4
+U 1 1 5CFEE4E4
+P 9350 4050
+F 0 "D4" H 9350 3825 50  0000 C CNN
+F 1 "1N4148W" H 9350 3925 50  0000 C CNN
+F 2 "Diode_SMD:D_SOD-123" H 9350 3875 50  0001 C CNN
+F 3 "https://www.vishay.com/docs/85748/1n4148w.pdf" H 9350 4050 50  0001 C CNN
+	1    9350 4050
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	9500 3525 9500 3775
+Wire Wire Line
+	9500 3775 9875 3775
+Connection ~ 9500 3775
+Wire Wire Line
+	9500 3775 9500 4050
+Wire Wire Line
+	9200 3525 9200 3775
+Wire Wire Line
+	9200 3775 8400 3775
+Wire Wire Line
+	8400 3775 8400 3925
+Connection ~ 9200 3775
+Wire Wire Line
+	9200 3775 9200 4050
+Connection ~ 8400 3925
+Wire Wire Line
+	8400 3925 8475 3925
+Wire Wire Line
+	8775 5475 9875 5475
+Wire Wire Line
+	9875 5475 9875 4525
+Wire Wire Line
+	8775 2275 9875 2275
+Wire Wire Line
+	9875 3475 9875 3375
+Wire Wire Line
+	9875 3850 9875 3775
+Connection ~ 8775 5475
+Wire Wire Line
+	9875 2975 9875 2275
+Connection ~ 9875 3775
+Wire Wire Line
+	9875 3775 9875 3675
+Wire Wire Line
+	9875 4125 9875 4050
+Wire Wire Line
+	9575 3175 8775 3175
+Connection ~ 8775 3175
+Wire Wire Line
+	8775 3175 8775 3725
+Wire Wire Line
+	9575 4325 8775 4325
+Connection ~ 8775 4325
+Wire Wire Line
+	8775 4325 8775 4500
+Text GLabel 1225 3875 2    50   Input ~ 0
+Vout
+Wire Wire Line
+	1225 3875 1100 3875
+Connection ~ 6225 3700
+Connection ~ 8050 3700
+Wire Wire Line
+	9875 3775 10075 3775
+Text GLabel 10075 3775 2    50   Output ~ 0
+Vout
+$Comp
+L Mechanical:MountingHole L1
+U 1 1 5D029271
+P 1025 5200
+F 0 "L1" H 1125 5246 50  0000 L CNN
+F 1 "MountingHole" H 1125 5155 50  0000 L CNN
+F 2 "ouroborosLogo:ouroboros" H 1025 5200 50  0001 C CNN
+F 3 "~" H 1025 5200 50  0001 C CNN
+	1    1025 5200
+	1    0    0    -1  
+$EndComp
+$EndSCHEMATC
