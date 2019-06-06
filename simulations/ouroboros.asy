@@ -5,12 +5,14 @@ LINE Normal 128 0 -48 -88
 LINE Normal -48 88 -48 -88
 LINE Normal 128 0 144 0
 TEXT 78 33 Left 2 G
-WINDOW 38 26 0 Center 1
+TEXT 0 -49 Center 2 VCC
+TEXT -1 48 Center 2 VSS
+WINDOW 38 26 0 Center 2
 WINDOW 0 46 -60 Left 2
-WINDOW 39 20 17 Center 0
+WINDOW 39 20 17 Center 2
 SYMATTR SpiceModel Ouroboros
-SYMATTR Description Ouroboros amp op
 SYMATTR SpiceLine tap=0.7056
+SYMATTR Description Ouroboros amp op
 PIN -48 48 LEFT 8
 PINATTR PinName V+
 PINATTR SpiceOrder 1
